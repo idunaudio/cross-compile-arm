@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo "$1"
+cd /github/workspace
+ls -l
+echo "running command \"${1}\""
 ${1}
-time=$(date)
-echo "::set-output name=time::$time"
+echo "::set-output name=time::$(date)"
