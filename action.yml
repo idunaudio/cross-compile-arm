@@ -1,0 +1,15 @@
+name: cross-compile-arm
+description: Cross-compile respoitory code for ARM processors
+inputs:
+  make-cmd:
+    description: The make command to run
+    required: true
+    default: make all
+outputs:
+  time:
+    description: The time compilation finished
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.make-cmd }}
