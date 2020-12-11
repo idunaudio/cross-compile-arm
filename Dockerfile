@@ -7,5 +7,5 @@ RUN         apt-get install -y g++-arm-linux-gnueabihf make
 WORKDIR     /github/workspace
 RUN         ls -l
 
-COPY        entrypoint.sh /entrypoint.sh
-ENTRYPOINT  ["/entrypoint.sh"]
+COPY        build.sh build.sh
+ENTRYPOINT  ["./build.sh"]
